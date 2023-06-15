@@ -20,3 +20,14 @@ def top_spruce(amount: int):
     for i in range(len(lines)):
         if lines[i] == "#":
             available_indices.append(i)
+
+    # Replace random "#" characters with "O" without replacing spaces
+    num_replacements = random.randint(1, min(len(available_indices), len(lines)))
+    for _ in range(num_replacements):
+        random_index = random.choice(available_indices)
+        lines = lines[:random_index] + "O" + lines[random_index+1:]
+        available_indices.remove(random_index)
+    # print (f"Candles lit: {num_replacements}")
+    # print(len(available_indices))
+    # print(len(lines))
+    print(lines)
