@@ -31,3 +31,10 @@ def top_spruce(amount: int):
     # print(len(available_indices))
     # print(len(lines))
     print(lines)
+
+def leg(amount: int):
+    space = amount - 2
+    if amount > 1:
+        print(" " * space + "|#|")
+    else:
+        print(" " * space + "|")
