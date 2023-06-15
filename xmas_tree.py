@@ -38,3 +38,11 @@ def leg(amount: int):
         print(" " * space + "|#|")
     else:
         print(" " * space + "|")
+
+def spruce(amount: int):
+    top_spruce(amount)
+    leg(amount)
+
+if __name__ == "__main__":
+    choice = int(input("How tall is the tree? "))
+    spruce(choice)
